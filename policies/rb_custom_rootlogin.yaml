@@ -1,0 +1,17 @@
+---
+policyId: abcd-1234
+title: Host - Root Login
+enabled: true
+policyType: Violation
+alertEnabled: true
+alertProfile: LW_HA_USER_LOGINS_DEFAULT_PROFILE.HA_User_Login_Violation
+evalFrequency: Hourly
+queryId: RB_Custom_Host_Activity_RootLogin
+limit: 1000
+severity: critical
+description: |-
+  No one should be logging in as root.
+remediation: |-
+  Isolate the box in question
+tags:
+  - rbcustom
