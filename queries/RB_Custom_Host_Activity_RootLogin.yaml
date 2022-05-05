@@ -1,0 +1,20 @@
+---
+queryId: RB_Custom_Host_Activity_RootLogin
+queryText: |-
+    {
+        source {
+            LW_HA_USER_LOGINS
+        }
+        filter {
+            USERNAME = 'root'
+        }
+        return {
+            MID,
+            USERNAME,
+            HOSTNAME,
+            IP_ADDR,
+            TTY,
+            UID,
+            GID
+        }
+    }
